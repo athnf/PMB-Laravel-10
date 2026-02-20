@@ -15,8 +15,8 @@ Sistem ini difokuskan pada keamanan pelaksanaan ujian (*Anti-Cheat*) dan kemudah
 
 > *Tambahkan screenshot antarmuka (Landing Page, Admin Dashboard, Ujian Online) di sini untuk melengkapi portofolio.*
 
-- `blob:https://web.whatsapp.com/19f91839-0ed1-4135-a630-8b6dd09246a3`
-- `[Screenshot Portal Mahasiswa]`
+- blob:https://web.whatsapp.com/19f91839-0ed1-4135-a630-8b6dd09246a3
+- `[blob:https://web.whatsapp.com/19f91839-0ed1-4135-a630-8b6dd09246a3]`
 - `[Screenshot Ruang Ujian Anti-Cheat]`
 - `[Screenshot Admin Dashboard]`
 
