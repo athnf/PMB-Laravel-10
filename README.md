@@ -2,20 +2,20 @@
   <img src="public/logo65.png" alt="Logo Instansi" width="120" />
 </p>
 
-<h1 align="center">Sistem Penerimaan Mahasiswa Baru (PMB) Berbasis Web</h1>
+<h1 align="center">Sistem Penerimaan Mahasiswa Baru Berbasis Web</h1>
 
 <p align="center">
-  <strong>Platform Manajemen Seleksi Akademik Terintegrasi dan Pelaksanaan Ujian Daring Terpusat</strong><br>
-  <em>Dikembangkan sebagai solusi digitalisasi administrasi penerimaan kandidat mahasiswa baru dengan standar keamanan tingkat tinggi.</em>
+  <strong>Sistem Informasi Manajemen Seleksi Akademik dan Ujian Online Terintegrasi</strong><br>
+  <em>Solusi digital untuk modernisasi proses pendaftaran, pelaksanaan tes masuk (CBT), dan pendaftaran ulang dengan standar keamanan tinggi.</em>
 </p>
 
 <p align="center">
-  <a href="#tinjauan-sistem">Tinjauan Sistem</a> •
   <a href="#deskripsi-proyek">Deskripsi Proyek</a> •
+  <a href="#tinjauan-sistem">Tinjauan Sistem</a> •
   <a href="#fitur-utama">Fitur Utama</a> •
-  <a href="#arsitektur-dan-teknologi">Teknologi</a> •
-  <a href="#panduan-instalasi">Instalasi</a> •
-  <a href="#troubleshooting-dan-faq">Troubleshooting</a> •
+  <a href="#teknologi-yang-digunakan">Teknologi</a> •
+  <a href="#panduan-instalasi">Panduan Instalasi</a> •
+  <a href="#troubleshooting--faq">Troubleshooting</a> •
   <a href="#kredit-dan-lisensi">Kredit</a>
 </p>
 
@@ -30,181 +30,182 @@
 
 ## 📝 Deskripsi Proyek
 
-Aplikasi **Sistem Penerimaan Mahasiswa Baru Berbasis Web** ini merupakan sebuah platform sistem informasi yang dirancang untuk menangani seluruh rangkaian operasional penerimaan kandidat mahasiswa secara digital (End-to-End). Sistem ini mengakomodasi proses pendaftaran akun, pelaksanaan ujian seleksi berbasis komputer (Computer-Based Test/CBT), penilaian akhir oleh administrator, hingga tahap pendaftaran ulang dan penciptaan Nomor Induk Mahasiswa (NIM).
+Aplikasi **Sistem Penerimaan Mahasiswa Baru Berbasis Web** ini adalah platform digital *End-to-End* yang dirancang khusus untuk memfasilitasi seluruh alur penerimaan pendaftar baru. Mulai dari proses pembuatan akun, pelaksanaan ujian seleksi (Computer-Based Test / CBT) jarak jauh, penilaian otomatis, hingga proses administrasi pendaftaran ulang dan penerbitan Nomor Induk Mahasiswa (NIM).
 
-Proses perancangan dan pengembangan (Development Lifecycle) platform ini berlangsung selama kurang lebih **satu bulan**. Tahapan pengembangan mencakup:
-1. **Perencanaan dan Abstraksi (*Brainstorming*):** Menentukan ruang lingkup aplikasi, alur basis data, dan entitas pengguna. Mengambil studi preseden dari platform ujian nasional berskala besar seperti UTBK-SNBT untuk memastikan pengalaman ujian yang tegas dan presisi.
-2. **Perancangan Antarmuka (*UI/UX Design*):** Penyusunan antarmuka yang formal, modern, dan berfokus pada pengalaman pengguna yang responsif menggunakan *Tailwind CSS*.
-3. **Pengembangan Backend dan Logika Ujian:** Pembuatan arsitektur sistem menggunakan *Laravel* dan integrasi algoritma pengawasan ujian daring (*Anti-Cheat Middleware*).
-4. **Tahap Pengujian dan *Debugging*:** Penelusuran celah keamanan, penyempurnaan skrip pemrosesan asinkron (*AJAX*), dan penyelesaian *bug* pada antarmuka.
+Proses riset dan tahapan *development* proyek ini memakan waktu **kurang lebih 1 bulan**. Menjalani beberapa fase kritis yang dimulai dari:
+1. **Brainstorming & Riset Konsep:** Mengurutkan alur pendaftaran logis dan mengambil referensi desain serta ketegasan sistem ujian langsung dari platform seleksi akademik berskala nasional (seperti portal SNBT/UTBK).
+2. **UI/UX & Frontend Development:** Merancang antarmuka yang bersih, profesional, dan responsif untuk berbagai ukuran layar menggunakan Tailwind CSS.
+3. **Logika Ujian & Anti-Cheat:** Menulis algoritma perlindungan ujian *real-time* untuk mencegah kecurangan, mengamankan sesi ujian, serta memastikan jawaban peserta tersimpan otomatis (*Autosave*).
+4. **Debugging & Testing:** Proses panjang dalam mengeliminasi *bug*, memperbaiki integrasi aliran data AJAX, dan menyempurnakan performa server untuk memastikan aplikasi layak tayang (*Production Ready*).
 
-Platform ini sangat ideal digunakan untuk mendemonstrasikan kapabilitas pembangunan aplikasi berskala *Full-Stack* (Backend dan Frontend), serta layak menjadi referensi dokumentasi portofolio profesional.
+Aplikasi web ini sangat cocok dijadikan referensi portofolio profesional atau dokumentasi arsitektur sistem akademik modern.
 
 ---
 
 ## 📸 Tinjauan Sistem
 
-Sistem ini memiliki berbagai antarmuka yang difokuskan pada pengguna masing-masing, meliputi kapabilitas pendaftar dan administrator.
+Sistem ini memiliki *User Interface* yang disesuaikan untuk setiap jenis pengguna (*Multi-Role*), dengan mengedepankan pengalaman visual yang estetik namun tetap formal.
 
 | Halaman Utama (Landing Page) |
 | :---: |
 | <img src="docs/images/Landing%20Page.jpeg" alt="Landing Page Preview" width="100%"> |
-| *Halaman depan konseptual dengan informasi dasar instansi, akses pendaftaran, serta panel masuk (Login).* |
+| *Halaman portal terdepan yang berisi informasi akses, pendaftaran, dan rincian teknologi.* |
 
-| Modul Kandidat (Portal Calon Mahasiswa) | Modul Pengelola (Admin Dashboard) |
+| Portal Mahasiswa (Student Dashboard) | Panel Admin (Panitia Seleksi) |
 | :---: | :---: |
 | <img src="docs/images/Portal%20Mahasiswa.jpg" alt="Portal Mahasiswa Preview" width="100%"> | <img src="docs/images/Admin%20Dashboard.jpg" alt="Admin Dashboard Preview" width="100%"> |
-| *Antarmuka privat kandidat untuk mengikuti sesi ujian CBT, memantau pengumuman nilai, serta mengunggah berkas daftar ulang persetujuan.* | *Panel utama panitia seleksi guna meninjau statistik rekursif, kelulusan pendaftar, manajemen soal, dan generator NIM.* |
+| *Dashboard untuk kandidat baru melakukan ujian, cek status kelulusan, dan proses daftar ulang.* | *Panel utama panitia guna memantau pelamar, mengelola soal ujian, validasi berkas, dan menerbitkan NIM.* |
 
 ---
 
 ## 🚀 Fitur Utama
 
-Sistem ini menerapkan konsep *Role-Based Access Control* (RBAC) yang memisahkan hak akses fungsionalitas antara kandidat pengguna (User/Student) dan panitia pengelola (Admin).
+Arsitektur aplikasi ini menggunakan konsep *Role-Based Access Control* (RBAC), yang dengan tegas memisahkan fungsionalitas antara Pendaftar dan Administrator.
 
-### Modul Pengguna (Calon Mahasiswa)
-- **Registrasi dan Manajemen Profil Terpusat:** Pengguna dapat mendaftarkan diri, mengisi kelengkapan biodata, dan menerima nomor tes pendaftaran.
-- **Sistem Ujian CBT (*Computer-Based Test*):** Pelaksanaan uji soal pilihan ganda yang disajikan dengan antarmuka proyektif dan batasan waktu (*countdown timer*) yang tervalidasi di sisi peladen (Server-Side).
-- **Protokol Keamanan Ujian (*Anti-Cheat Engine*):** Dilengkapi dengan kemampuan pengawasan aktivitas peramban, mencakup deteksi perpindahan halaman (*Tab Change*) dan penyembunyian layar (*Window Blur*). Ujian akan otomatis dihentikan apabila pelanggaran mencapai ambang batas.
-- **Penyimpanan Asinkron (*Autosave*):** Jawaban secara otomatis terkirim dan disimpan di peladen menggunakan integrasi *AJAX* tanpa perlu memuat ulang halaman utama ujian.
-- **Peninjauan Hasil Real-Time:** Penampilan nilai evaluasi dasar pasca-ujian beserta pemantauan status persetujuan dari dewan penguji/admin.
-- **Fasilitas Daftar Ulang:** Fitur untuk mengunggah manifestasi pembayaran, menyetujui perjanjian akademik, dan memperoleh Nomor Induk Mahasiswa (NIM).
+### Modul Pendaftar (Student)
+- **Registrasi & Manajemen Profil:** Pendaftaran mandiri dengan pencatatan kelengkapan data diri dan nomor urut tes (Test Number).
+- **Computer-Based Test (CBT):** Sistem ujian pilihan ganda dengan fitur pelacakan progres, disajikan bersama antarmuka mode fokus dan *countdown timer* langsung dari sisi server.
+- **Sistem Keamanan Anti-Cheat:** Fitur pemantauan aktivitas *browser* kandidat. Sistem mampu mendeteksi pergantian tab (*Tab Change*) atau saat layar ujian diminimize (*Window Blur*). Jika batas pelanggaran terlampaui, ujian akan otomatis dikunci dan dibatalkan.
+- **Autosave Jawaban (AJAX):** Jawaban akan langsung direkam ke database secara spesifik tiap kali opsi diklik, meminimalisir kehilangan progres akibat putus koneksi tanpa adanya gangguan *loading* halaman.
+- **Notifikasi Kelulusan:** Setelah ujian terkirim, sistem akan memberikan visualisasi status skor sementara hingga validasi evaluasi akhir dari panitia masuk.
+- **Modul Pemberkasan (Daftar Ulang):** Fasilitas bagi kandidat yang LULUS untuk mengunggah dokumen bukti pembayaran dan formulir persetujuan akademik sebelum akhirnya menerima peresmian NIM.
 
 ### Modul Pengelola (Administrator)
-- **Dasbor Analitik Deskriptif:** Penyajian akumulasi data pengguna, tingkat kelulusan, dan status penyelesaian ujian.
-- **Sistem Manajemen Bank Soal (CRUD):** Fungsionalitas utuh untuk merumuskan pertanyaan, menyusun opsi jawaban, menentukan kunci jawaban yang benar, serta pengaturan bobot nilai.
-- **Evaluasi dan Penentuan Kelulusan Manual:** Fitur bagi administrator untuk mempertimbangkan hasil tes kandidat dan memberikan penetapan (LULUS/TIDAK LULUS) yang dilengkapi catatan evaluasi.
-- **Verifikasi Dokumen Akademik:** Panel kontrol untuk menyetujui atau menolak dokumen administrasi registrasi ulang dari pendaftar.
-- **Generator Nomor Induk Mahasiswa (NIM):** Modul eksklusif guna menghasilkan rentang identitas mahasiswa baru yang sah pada akhir alur penerimaan.
+- **Dashboard Statistik:** Diagram infografis ringan yang menampilkan secara langsung jumlah akumulasi pengguna, peserta yang telah ujian, dan rasio kandidat yang LULUS / TIDAK LULUS.
+- **Manajemen Bank Soal (CRUD):** Modul spesifik untuk merancang daftar pertanyaan, mendata empat opsi *multiple choice*, pengaturan kunci jawaban, dan nilai beban (*weight*).
+- **Otoritas Kelulusan:** Peninjauan rinci terhadap seluruh skor akhir per pengguna, dilengkapi akses memberikan keputusan mutlak (Passed/Failed) beserta sisipan catatan admin (*Admin Notes*).
+- **Verifikasi Bukti Administrasi:** Hak prerogatif admin untuk menerima atau menolak file bukti gambar pendaftaran ulang dari peserta.
+- **Sistem Generator NIM:** Fitur pengeluaran status resmi berisikan Nomor Induk Mahasiswa valid dan berurutan untuk pendaftar yang sepenuhnya tervalidasi.
 
 ---
 
-## ⚙️ Arsitektur dan Teknologi
+## ⚙️ Teknologi yang Digunakan
 
-Proyek ini dibangun menggunakan lini teknologi mutakhir yang relevan dengan standar industri, menjadikan aplikasi berjalan lancar, terjamin privasinya, dan responsif.
+Perancangan ekosistem kode sumber (Source Code) dikerjakan menggunakan tumpukan teknologi populer standar perangkat lunak industri:
 
-* **Teknologi Backend (Sisi Peladen):** Laravel Framework 10.x, PHP 8.2+
-* **Sistem Manajemen Basis Data:** MySQL 8.x / MariaDB
-* **Desain Antarmuka (CSS Framework):** Tailwind CSS v3.x (*Utility-First Framework*)
-* **Mesin Templat HTML:** Laravel Blade Engine
-* **Pemrosesan Interaktif (Sisi Klien):** Vanilla ES6 JavaScript, jQuery (khusus permintaan basis AJAX), dan Alpine.js
-* **Penanganan Notifikasi Pop-up:** SweetAlert2 Library
+* **Framework Backend:** Laravel 10.x
+* **Bahasa Pemrograman:** PHP 8.2+
+* **Database Engine:** MySQL 8.x / MariaDB
+* **Rendering Template:** Laravel Blade
+* **Styling Framework:** Tailwind CSS v3.x (*Utility-First Framework*)
+* **Interaktivitas Frontend:** Vanilla JavaScript, Alpine.js (Dropdown/Modals State), jQuery (AJAX Handling)
+* **Alert & Notifikasi:** SweetAlert2
 
 ---
 
-## 🛠️ Panduan Instalasi (Development Environment)
+## 🛠️ Panduan Instalasi (Development Setup)
 
-Untuk mendemonstrasikan proyek ini secara lokal, pastikan kapabilitas lingkungan pengembang Anda telah dilengkapi dengan prasyarat wajib seperti PHP, Composer, serta perangkat lunak agregator peladen (Contoh: XAMPP, ampps, atau Laragon).
+Bagi pengembang (Developer) atau peninjau yang ingin mencoba menjalankan proyek ini di *Local Development*, pastikan instalasi prasyarat perangkat lunak seperti instalasi PHP, Composer, serta XAMPP/Laragon (untuk server database) telah siap di komputer.
 
-### Langkah 1: Penggandaan Repositori Kode
-Buka perangkat terminal antarmuka baris perintah (CLI) Anda, arahkan pada lokasi *folder* pilihan, dan eksekusi instruksi:
+### 1. Download / Clone Repository
+Gunakan Git melalui Terminal/Command Prompt untuk mengunduh seluruh fail proyek:
 ```bash
 git clone https://github.com/athnf/pmb-system.git
 ```
-Masuk ke dalam target peladen repositori:
+Masuk ke dalam folder proyek:
 ```bash
 cd pmb-system
 ```
 
-### Langkah 2: Instalasi Ketergantungan Paket (Dependencies)
-Laravel menggunakan *Composer* untuk memanajemen kumpulan pustaka PHP pendukung, jalankan kueri berikut:
+### 2. Install Dependensi (Composer)
+Unduh seluruh library dan paket pihak ketiga yang berkaitan dengan framework Laravel:
 ```bash
 composer install
 ```
 
-### Langkah 3: Modifikasi Parameter Lingkungan (*Environment*)
-Gandakan fail contoh `.env` ke bentuk konfigurasi fungsional:
-*(Bagi pengguna OS Windows/Command Prompt, gunakan utilitas `copy .env.example .env`)*
+### 3. Konfigurasi Environment (.env)
+Buat salinan fail environment dengan perintah:
 ```bash
 cp .env.example .env
 ```
-Anda diwajibkan menyunting fail `.env` menggunakan penyunting teks dan memperbarui kunci koneksi basis data (Contoh menggunakan XAMPP standar):
+*(Bagi pengguna Windows CMD biasa selain GitBash, gunakan: `copy .env.example .env`)*.
+
+Buka file `.env` di Code Editor Anda (seperti VSCode), dan ubah bagian kredensial *Database* agar sesuai dengan pengaturan MySQL komputer Anda (Misal XAMPP default):
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=pmb_system   # (Pastikan Anda telah membuat basis data kosong bernama pmb_system di sistem Anda)
+DB_DATABASE=pmb_system   # (Pastikan Anda sudah membuat database bernama pmb_system di phpMyAdmin terlebih dahulu!)
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### Langkah 4: Aktivasi Kunci Enkripsi Aplikasi
-Berikan algoritma otentikasi sesi kepada arsitektur Laravel Anda:
+### 4. Generate Application Key
+Aktifkan perlindungan enkripsi kunci (*App Key*) untuk mengamankan manajemen *session* pengguna:
 ```bash
 php artisan key:generate
 ```
 
-### Langkah 5: Migrasi Tabel dan Penyuntikan Data Awal (*Seed*)
-Kueri ini akan secara utuh memigrasi rancangan skema basis data ke basis data lokal dan memuat data awal seperti konfigurasi akses ganda, soal ujian contoh, dan kredensial uji coba administrator:
+### 5. Eksekusi Tabel Database & Seeder
+Perintah gabungan di bawah ini akan secara otomatis merancang skema *tabel database* sekaligus menyisipkan data *default*, seperti akun Admin dan 10 Data Soal Ujian awal:
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-### Langkah 6: Pembuatan Tautan Simbolik Direktori Penyimpanan (*Storage Linking*)
-Untuk memvalidasi bahwa seluruh *file* berkas unggahan bukti pembayaran pengguna dapat secara sah dan terbuka diamati publik di halaman pengguna admin, eksekusi perintah:
+### 6. Aktivasi Akses File (Storage Link)
+*Langkah ini berstatus sangat wajib*. Tautkan penyimpanan internal peladen dengan jalur folder publik agar file-file (*Images* pendaftaran ulang) bisa diakses atau dirender di browser:
 ```bash
 php artisan storage:link
 ```
 
-### Langkah 7: Pengaktifan Peladen Virtual Uji Coba
-Seluruh ekosistem proyek kini sudah disiapkan. Operasikan peladen tertanam:
+### 7. Jalankan Local Server
+Nyalakan sistem dan mari lihat hasilnya:
 ```bash
 php artisan serve
 ```
-Buka tautan yang muncul (biasanya **`http://localhost:8000`**) melalui perangkat lunak penjelajah situs web (Browser) Anda.
+Proyek berhasil terpanggil. Buka Browser (Chrome, Firefox, dsb.) dan akses URL: **`http://localhost:8000`**
 
 ---
 
-## 🔐 Kredensial Pengujian (Seeder Demo)
+## 🔐 Mode Pengujian User (Login Akses)
 
-Jika proses *Seeding* (Langkah 5) sukses diterapkan, Anda dapat mensimulasikan sesi pengguna menggunakan kredensial bawaan:
+Proyek ini telah dibekali dua peran demonstrasi, apabila perintah `Seed` di langkah ke-5 telah berhasil berjalan sukses:
 
-**Akses Administrator (Panitia)**
-* Perutean Login: **`/login`**
-* Akun Surel: **`admin@admin.com`**
-* Kata Sandi: **`password`**
+**Untuk Menguji Sisi Panitia (Admin):**
+* URL Login: **`http://localhost:8000/login`**
+* Email: **`admin@admin.com`**
+* Password: **`password`**
 
-**Akses Mahasiswa Baru (Kandidat)**
-Silakan mengakses tombol Registrasi di bagian atas halaman utama situs, dan daftarkan diri guna menikmati keutuhan simulasi pendaftar mandiri.
-
----
-
-## 📖 Troubleshooting dan FAQ (Pertanyaan yang Sering Diajukan)
-
-Terdapat berbagai kendala teknis umum (*Errors*) kala pengembang menjalankan aplikasi melalui instalasi awal repositori. Berikut panduan mitigasi permasalahan utamanya:
-
-**1. Isu Migrasi: Timbul keterangan galat jaringan `"Connection Refused"` saat `migrate`**  
-Rujukan penyelesaian awal: Pastikan aplikasi pendamping peladen seperti XAMPP sudah dijalankan (Layanan modul MySQL menyala). Di samping itu, validasi bahwa fail `.env` telah terkoneksi tepat pada basis data (`pmb_system`).
-
-**2. Isu Hak Akses Ujian: Setelah memuat ujian timbul notifikasi `"Sesi Ujian Tidak Valid"`**  
-Rujukan penyelesaian awal: Modul *Anti-Cheat Middleware* sengaja mencegah peserta untuk memasuki laman ujian apabila nilai token pengerjaan dan basis waktu telah diakhiri paksa / peserta memuat kembali *URL* aktif tanpa validasi alur persiapan ujian.
-
-**3. Isu Visibilitas Berkas: Bukti gambar pembayaran yang diunggah kandidat menjadi `Broken Image` (Logo Rusak) di Dasbor Admin**  
-Rujukan penyelesaian awal: Anda melewati prosedur wajib pada `Langkah 6`. Pastikan integrasi berkas ke publik telah ditautkan secara eksplisit melalui perintah konsol `php artisan storage:link`.
-
-**4. Isu Kriptografi: Layar peladen membeku dengan informasi `"No application encryption key has been specified."`**  
-Rujukan penyelesaian awal: Framework mendeteksi *ENV* aplikasi hilang dari otentikasi kunci utama. Jalankan ulang kueri terminal Anda `php artisan key:generate`.
-
-**5. Isu Sesi Kadaluarsa: Antarmuka log keluar secara tiba-tiba ditandai galat spesifik `"419 - Page Expired"`**  
-Rujukan penyelesaian awal: Proteksi celah peretasan Formulir Lintas Situs *(CSRF/Cross-Site Request Forgery)* sedang diaktifkan Laravel terhadap formulir pengiriman data jika dibiarkan tanpa adanya interaksi pada durasi lama. Muat ulang halaman penjelajah web untuk mencabut perlindungan formulir usang tersebut dan coba ulang.
+**Untuk Menguji Sisi Pelamar Baru:**
+Buka halaman utama web (`http://localhost:8000`), dan langsung cobalah fitur kelancaran *User Experience* dengan menekan tombol **DAFTAR AKUN BARU**. Simulasikan alurnya secara penuh hingga melewati tes CBT.
 
 ---
 
-## 📜 Kredit dan Lisensi Proyek
+## 📖 Troubleshooting & FAQ
 
-Proyek ini dibangun tidak hanya sebagai sebuah infrastruktur sistem administrasi yang kompleks, melainkan dedikasi komprehensif terkait pemenuhan syarat kelayakan dalam sidang Ujian Sertifikasi Kompetensi (USK).
+Berikut adalah masalah umum (*Errors*) teknis yang paling sering membuat pengembangan web tersendat saat pemasangan kali pertama beserta solusi pastinya (*Quick Fix*):
 
-Seluruh sistem arsitektur pengkodingan pada repositori spesifik ini dihibahkan (*Transfer of Intellectual Property*) secara penuh agar menjadi portfolio unjuk kemampuan atas nama praktikan adik kelas:
+**Q: Terminal mengeluarkan tulisan error `"Connection Refused"` saat saya mengetik perintah `php artisan migrate`.**  
+A: Server MySQL Anda di perangkat lunak (XAMPP/Laragon) sangat mungkin belum diklik *Start*. Solusi kedua: Pastikan nama basis data yang Anda tulis di `.env` sudah benar terbuat di *phpMyAdmin*.
 
-💼 **Pemilik Proyek Hak Milik (Kandidat Ujian Kompetensi)**:
-* **Nama Akademik**: TRISTAN
-* **Kelas dan Jurusan**: XII PPLG (Pengembangan Perangkat Lunak dan Gim)
-* **Instansi Pendidikan**: SMK Negeri 65 Jakarta
+**Q: Saya coba uji coba form registrasi/ujian, layarnya malah mengembalikan kode `"419 - Page Expired"`.**  
+A: Mekanisme perlindungan keamanan CSRF milik Laravel sengaja menggugurkan token pada browser apabila Anda membiarkan laman diam dalam durasi lama. Penyelesaian terbaik adalah me-refresh (*F5*) ulang halaman form web bersangkutan.
 
-💻 **Kontributor Teknis dan Konsultan (*Full-Stack Engineer*)**:
-* Dikembangkan oleh: [@athnf](https://github.com/athnf) di platform GitHub.
+**Q: Setelah saya *submit* selesai ujian, tiba-tiba muncul notifikasi bertuliskan `"Sesi Tidak Ditemukan" / "Gagal Validasi"`.**  
+A: Middleware Anti-Cheat yang aktif mencegah URL ujian online diakses ulang jika peserta *reload* halaman diam-diam di tengah pengerjaan (*Illegal Refresh*). Ini fitur perlindungan ujian, bukan sistem rusak.
 
-Kami senantiasa memelihara validitas kode pemrograman ini sebagai pilar penunjang portofolio edukasi struktural dan etika pengembangan tingkat profesional korporasi (*Enterprise Standard*).
+**Q: Bukti gambar pembayaran yang diunggah pelamar saat daftar ulang menjadi logo rusak (*Broken Image*) di mata Admin.**  
+A: Terminal Anda terlewat pada langkah penautan folder. *Turn off* server sejenak (`Ctrl + C`), lalu kembalikan tautan tersebut dengan mengetik `php artisan storage:link`, barulah *start server* lagi.
+
+**Q: Layar browser memutih dengan log tulisan `"No application encryption key has been specified"`.**  
+A: Hal paling klasik bagi developer Laravel yang baru mengkloning project. Kempeskan saja kegelisahan tersebut cukup dengan mengeksekusi `php artisan key:generate` dan web otomatis menyala kembali.
+
+---
+
+## 📜 Kredit dan Dedikasi Proyek
+
+Pengembangan ekosistem sistem informasi akademik modern ini merupakan wujud dedikasi, serta bentuk hibah struktural teknikal murni (*Technical Engineering Contribution*) yang dipersembahkan demi kelancaran prasyarat kelulusan pada **Ujian Sertifikasi Kompetensi (USK)** siswa.
+
+Adapun implementasi fungsional sistem ini adalah sepenuhnya hak cipta bagi presentasi proyek portfolio atas nama:
+
+🎓 **TRISTAN**  
+(Siswa Praktikan Tingkat Akhir / *Ade Kelas*)  
+🏫 **Kelas XII PPLG** (Pengembangan Perangkat Lunak dan Gim)  
+🏢 **SMK Negeri 65 Jakarta**  
+
+**Konsultan & Pemrogram Full-Stack Engineer:**  
+Dengan komitmen untuk mematuhi standar *Clean Architecture*, *design pattern* logika ujian, fitur UI lanjutan, dukungan riset penyelesaian, dan validasi fungsional di balik layar secara total didukung penuh oleh:  
+💻 **[@athnf](https://github.com/athnf)** di platform GitHub.
 
 ***
-*Penyelarasan arsitektur basis kode dibuat menggunakan panduan struktural rekayasa perangkat lunak modern untuk menciptakan harmoni skalabilitas fungsional.*
+*Struktur *source code* dirancang melalui dedikasi kuat dengan memprioritaskan arsitektur perangkat lunak yang andal, aman, dan dapat distandardisasi bagi pengelolaan institusi.*
