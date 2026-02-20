@@ -196,9 +196,7 @@ A: Hal paling klasik bagi developer Laravel yang baru mengkloning project. Kempe
 
 Pengembangan ekosistem sistem informasi akademik modern ini merupakan wujud dedikasi, serta bentuk hibah struktural teknikal murni (*Technical Engineering Contribution*) yang dipersembahkan demi kelancaran prasyarat kelulusan pada **Ujian Sertifikasi Kompetensi (USK)** siswa.
 
-Adapun implementasi fungsional sistem ini adalah sepenuhnya hak cipta bagi presentasi proyek portfolio atas nama:
-
-🎓 **TRISTAN**  
+🎓 **TRISTAN FAIZ A.**  
 (Siswa Praktikan Tingkat Akhir / *Ade Kelas*)  
 🏫 **Kelas XII PPLG** (Pengembangan Perangkat Lunak dan Gim)  
 🏢 **SMK Negeri 65 Jakarta**  
