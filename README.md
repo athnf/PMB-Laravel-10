@@ -5,15 +5,15 @@
 <h1 align="center">Sistem Penerimaan Mahasiswa Baru Berbasis Web</h1>
 
 <p align="center">
-  <strong>Solusi Modern & Terintegrasi untuk Seleksi Penerimaan Akademik</strong><br>
-  <em>Dibuat khusus untuk memenuhi kebutuhan standarisasi ujian masuk dengan keamanan tinggi.</em>
+  <strong>Sistem Informasi Manajemen Seleksi dan Pendaftaran Akademik</strong><br>
+  <em>Dikembangkan menggunakan arsitektur Laravel untuk memenuhi standar keamanan dan efisiensi pelaksanaan ujian daring.</em>
 </p>
 
 <p align="center">
-  <a href="#fitur-unggulan">Fitur Utama</a> •
-  <a href="#cerita-di-balik-layar">Behind The Scenes</a> •
-  <a href="#tech-stack">Teknologi</a> •
-  <a href="#persiapan--instalasi">Instalasi</a> •
+  <a href="#tinjauan-sistem">Tinjauan Sistem</a> •
+  <a href="#fitur-utama">Fitur Utama</a> •
+  <a href="#teknologi-yang-digunakan">Teknologi</a> •
+  <a href="#panduan-instalasi">Panduan Instalasi</a> •
   <a href="#faq--troubleshooting">FAQ</a>
 </p>
 
@@ -26,174 +26,168 @@
 
 ---
 
-## 📸 Tinjauan Sistem (System Preview)
+## 📝 Deskripsi Proyek
 
-*Inspirasi desain langsung dari Portal SNBT Nasional untuk pengalaman tes yang menegangkan, premium, sekaligus aman! Tertarik mencoba fungsionalitas aslinya? Mari ikuti panduan instalasi di bawah.*
+Aplikasi **Sistem Penerimaan Mahasiswa Baru Berbasis Web** ini dirancang secara komprehensif guna mendigitalisasi proses administrasi penerimaan kandidat mahasiswa / siswa baru, mulai dari tahap registrasi awal, pelaksanaan seleksi berbasis komputer (CBT), evaluasi penilaian, hingga verifikasi daftar ulang.
+
+Pengembangan antarmuka pada modul ujian secara khusus mengadaptasi format tampilan seleksi akademik berskala nasional (seperti SNBT/UTBK), dengan mengutamakan aspek kejelasan, ketegasan instruksi, serta integrasi sistem pengawasan otomatis (*Anti-Cheat*).
+
+---
+
+## 📸 Tinjauan Sistem (Preview)
+
+Berikut adalah beberapa tampilan utama dari antarmuka sistem:
 
 | Halaman Utama (Landing Page) |
 | :---: |
 | <img src="docs/images/Landing%20Page.jpeg" alt="Landing Page Preview" width="100%"> |
-| *Wajah terdepan sistem dengan UI ala Universitas modern dan warna kontras.* |
+| *Halaman depan sebagai pusat informasi registrasi dan portal masuk.* |
 
-| Portal Mahasiswa & Ujian Anti-Cheat | Admin Dashboard & Evaluasi |
+| Portal Mahasiswa (Student Dashboard) | Panel Administrator (Admin Dashboard) |
 | :---: | :---: |
 | <img src="docs/images/Portal%20Mahasiswa.jpg" alt="Portal Mahasiswa" width="100%"> | <img src="docs/images/Admin%20Dashboard.jpg" alt="Admin Dashboard" width="100%"> |
-| *Dashboard khusus kandidat yang responsif untuk seleksi & daftar ulang.* | *Pusat komando komprehensif bagi Panitia untuk memantau data seluruh pendaftar.* |
-
-> ***Catatan:** Ini hanyalah cuplikan visual. Banyak fitur tersembunyi seperti validasi AJAX, Anti-Cheat Timer, & Animasi SweetAlert2 yang hanya bisa diview jika Anda menjalankan sistem ini langsung!*
+| *Antarmuka pendaftar untuk mengakses modul ujian dan memantau status kelulusan secara real-time.* | *Dashboard operasional panitia untuk memvalidasi kelulusan, meninjau statistik, dan mengawasi jalannya ujian.* |
 
 ---
 
-## 🏆 Informasi Lisensi & Kredit Proyek
+## 🚀 Fitur Utama
 
-> **Proyek Ujian Sertifikasi Kompetensi (USK)**
-> 
-> Mahakarya ini bukan sekadar tugas biasa, melainkan dedikasi akhir untuk syarat kelulusan komprehensif atas nama:
-> 
-> 🎓 **Nama**: TRISTAN  
-> 🏫 **Kelas**: XII PPLG (Pengembangan Perangkat Lunak dan Gim)  
-> 🏢 **Asal Instansi**: SMK Negeri 65 Jakarta  
-> 
-> 💻 **Full-Stack Engineer By**: [@athnf](https://github.com/athnf)
+Sistem ini memiliki dua hak akses utama (*Role-Based Access Control*) dengan pembagian fungsionalitas sebagai berikut:
 
-### 🕰 Cerita di Balik Layar (*Behind the Scenes*)
-Membangun web kompleks ini setidaknya memakan waktu **1 Bulan lebih!** 
-Awalnya banyak *ngaret*, cuma sebatas corat-coret ide dan bayangan (*brainstorming* tiada akhir), bongkar pasang desain berulang kali, *trial-and-error* memikirkan bagaimana caranya mencegah kecurangan (*anti-cheat algorithm*), sampai titik akhirnya tereksekusi mulus dengan arsitektur UI yang **terinspirasi kuat dari *feels* ketegangan Portal Resmi Ujian Kedinasan / UTBK-SNBT Nasional**.
+### Modul Pendaftar (Student)
+- **Manajemen Akun Terpusat:** Registrasi dan pengelolaan profil identitas.
+- **Ujian Online CBT (*Computer Based Test*):** Pelaksanaan ujian pilihan ganda yang bersifat acak dengan batasan waktu yang disinkronisasi ke server.
+- **Sistem *Anti-Cheat* (Keamanan Ujian):** Memiliki mekanisme pendeteksian perpindahan halaman browser (*tab change/window blur*), serta meminimalisir manipulasi sesi dengan penyimpanan jawaban *real-time* berbasis AJAX.
+- **Informasi Kelulusan:** Penampilan hasil skor dan pengumuman tahap seleksi.
+- **Registrasi Ulang (Pemberkasan):** Proses unggah bukti administrasi keberhasilan uji seleksi dan pencetakan Nomor Induk Mahasiswa (NIM).
 
----
-
-## 🚀 Fitur Unggulan
-
-Proyek ini tidak main-main dalam urusan fungsionalitas. Berikut hal gahar yang ditawarkan:
-
-- **🛡️ Sistem Ujian Anti-Cheat (CBT Mode):** 
-  Dilengkapi deteksi *Blur / Tab Out / Reload*. Siswa yang tertangkap mengintip Google / berpindah tab akan otomatis dihentikan paksa (Banned & Force Submit).
-- **💼 Role-Based Access Tepat Guna:**
-  Pembagian dua nyawa, sebagai **Kandidat Baru (User)** yang terjebak di ruang ujian, dan **Panitia PMB (Admin)** si penguasa data (Approval Ulang, Manual Override Nilai, DLL).
-- **⚡ Evaluasi & Penilaian Cerdas (Scoring Engine):**
-  Pendaftar langsung melihat bobot skor awal setelah menekan tombol *Submit*, lalu menembus fase evaluasi manual di tangan admin. Admin dapat memberikan persetujuan LULUS dan merilis NIM resmi.
-- **🎨 UI / UX Kelas Wahid:**
-  Desain yang mewah, clean, dengan perpaduan gradasi, transparansi, *Alpine.js* untuk dropdown super halus, *Tailwind CSS* form factor elegan, dan interaktif *SweetAlert2*.
-- **☁️ AJAX Autosave:**
-  Kandidat Ujian tidak perlu takut mati listrik! Setiap jawaban detik itu juga dikunci ke dalam database (Autosave System) tanpa loading ulang.
+### Modul Pengelola (Administrator)
+- **Analitik Dashboard:** Ringkasan statistik pendaftar, jumlah peserta seleksi, dan data kelulusan.
+- **Manajemen Bank Soal:** Fasilitas *Create, Read, Update, Delete* (CRUD) untuk mengatur ragam soal materi seleksi berserta konfigurasi kunci jawaban.
+- **Peninjauan Hasil Seleksi:** Pemantauan nilai ujian aktual dan hak untuk memberikan status akhir kelulusan pendaftar.
+- **Validasi Berkas:** Review pengajuan pendaftaran ulang dan verifikasi dokumen pembayaran.
+- **Generator NIM Otomatis:** Fasilitas pemberian hak registrasi identitas akademik final.
 
 ---
 
-## ⚙️ Tech Stack (*Under The Hood*)
+## ⚙️ Teknologi yang Digunakan
 
-Arsitektur aplikasi ini didukung barisan teknologi papan atas standar *Enterprise*:
-* **Core Framework**: Laravel 10.x (PHP 8.2+)
-* **Database Management**: MySQL 8.0 / MariaDB
-* **Frontend Logic**: Alpine.js, Vanilla ES6 JavaScript, jQuery (khusus AJAX Handler)
-* **Frontend UI Framework**: TailwindCSS v3.x (*Utility First Approach*)
-* **Blade Templating**: Sistem modular Layouts komponen
-* **Notification / Modals**: SweetAlert2 
+Arsitektur aplikasi dibangun dengan memanfaatkan ekosistem modern:
+
+* **Framework Backend:** Laravel 10.x
+* **Bahasa Pemrograman:** PHP 8.2+
+* **Sistem Basis Data:** MySQL 8.x
+* **Framework Frontend / UI:** Tailwind CSS v3.x
+* **Interaktivitas:** Vanilla JavaScript, jQuery (untuk penanganan AJAX), Alpine.js, dan SweetAlert2
 
 ---
 
-## 🛠️ Persiapan & Instalasi (Panduan Lengkap pemula)
+## 🛠️ Panduan Instalasi Konfigurasi (Lokal)
 
-Bagi Anda (Dosen Penguji, Penilai, atau Klien) yang ingin menjalankan proyek ini secara lokal tanpa kendala, silakan ikuti ritme presisi di bawah ini!
+Ikuti instruksi langkah demi langkah di bawah ini untuk memasang dan menjalankan proyek secara mandiri pada komputer Anda (*Local Development Environment*). Pastikan Anda telah menginstal **PHP**, **Composer**, dan perangkat lunak Server Database (XAMPP / Laragon dsb).
 
-### 1. Kloning Direktori (Clone Repository)
-Buka terminal OS Anda, tentukan letak penyimpanan, lalu tempel:
+### Bước 1: Unduh Repositori
+Jalankan perintah ini pada terminal untuk mengkloning repositori:
 ```bash
 git clone https://github.com/athnf/pmb-system.git
 ```
-Pindah ke dalam rumah folder yang baru kita unduh:
+Pindah ke dalam direktori aplikasi:
 ```bash
 cd pmb-system
 ```
 
-### 2. Download Komponen (Vendor Install)
-Karena *framework* sangat bergantung pada paket (libraries) pihak luar, kumpulkan dulu paket-paket tersebut dengan:
+### Bước 2: Pasang Dependensi Proyek
+Unduh pustaka (library) paket *vendor* yang dibutuhkan oleh Laravel:
 ```bash
 composer install
 ```
 
-### 3. Setup Lingkungan Operasi (Environment Configuration)
-Salin fondasi bawaan dari `.env.example` menjadi `.env` resmi Anda:
+### Bước 3: Konfigurasi Lingkungan (*Environment*)
+Salin file `.env.example` ke dalam format konfigurasi asli:
 ```bash
 cp .env.example .env
 ```
-*(Bagi pengguna OS Windows Git Bash, dapat perintah `copy .env.example .env`)*. 
-
-**Wajib Periksa File `.env`!**  
-Pastikan bagian Database di-isi sesuai XAMPP/Laragon di Komputer Anda:
+Buka file `.env` di teks editor, lalu atur *kredensial* basis data Anda. Pastikan nama database yang tertulis sama persis dengan nama database kosong yang telah Anda buat di MySQL/PhpMyAdmin sebelumnya.
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=pmb_system   <--- [PENTING] Buat Dulu Database Kosong ini di MySQL / PhpMyAdmin!
+DB_DATABASE=pmb_system   # (Sesuaikan dengan nama basis data yang Anda buat)
 DB_USERNAME=root
-DB_PASSWORD=             <--- Biarkan kosong jika tidak ada pasword XAMPP
+DB_PASSWORD=
 ```
 
-### 4. Aktivasi Nyawa Keamanan (App Key)
-Generate Encryption App Key rahasia bawaan framework dengan terminal:
+### Bước 4: Pembuatan Kunci Enkripsi Aplikasi
+Aktivasi algoritma keamanan sesi aplikasi:
 ```bash
 php artisan key:generate
 ```
 
-### 5. Membangun Tabel Server & Contoh Data (Migrate & Seed)
-Ini bagian seru, biarkan Laravel menyulap tabel struktur PMB secara ghaib sekaligus mengisi akun contoh *"Admin"* dan *"10 Soal Logika Ujian"* otomatis.
+### Bước 5: Pemrosesan Basis Data dan Penyemaian Data Awal
+Susun kerangka struktur basis data dan suntikkan data *default* seperti Akun Admin dan Data Uji Soal (*Seeder*):
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-### 6. Jembatan Ghaib Foto/File Berkas (Storage Link)
-Ini yang bikin file upload (Berkas Daftar Ulang KTP/Pembayaran dkk) bisa nongol di website publik. **JANGAN SKIP STEP INI**:
+### Bước 6: Hubungkan Tautan Penyimpanan Publik (*Storage Link*)
+Langkah ini diwajibkan untuk memastikan seluruh fail *upload* (berupa bukti transfer pendaftar) dapat terakses secara publik di peramban web:
 ```bash
 php artisan storage:link
 ```
 
-### 7. Mesin Dinyalakan! (Run Server)
+### Bước 7: Jalankan Aplikasi
+Instalasi telah selesai. Nyalakan peladen web virtual dengan perintah:
 ```bash
 php artisan serve
 ```
-Buka mata Anda dan saksikan Web ini hidup secara lokal di Browser dengan cara klik/masuk ke URL: **`http://localhost:8000`**
+Aplikasi kini berjalan di: **`http://localhost:8000`** atau **`http://127.0.0.1:8000`**
 
 ---
 
-## 🔑 Autentikasi Contoh (Mode Testing)
+## 🔐 Data Login (*Default Credentials*)
 
-Jika instalasi *seeder* Anda sukses di Tahap 5, gunakan akses "Mahakuasa" (Admin) ini untuk berkeliling memantau data:
+Apabila Anda telah menjalankan perintah *seed* (*Bước 5*), maka hierarki akun demo di bawah siap untuk digunakan.
 
-**Hak Akses Panitia / Admin Ujian:**
-* **Login URL**: `http://localhost:8000/login`
-* **Email**: `admin@admin.com`
-* **Password**: `password`
+**Akses Pengelola (Admin)**
+* Halaman Pintu Masuk: **`/login`**
+* Alamat Surel: **`admin@admin.com`**
+* Kata Sandi: **`password`**
 
-Sedangkan untuk simulasi Ujian (*User View*), sangat disarankan Anda meng-klik tombol **DAFTAR AKUN BARU** di layar depan dan bersimulasi *Real-time* menjadi mahasiswa.
-
----
-
-## 🧩 FAQ - Bingung Kok Gagal?
-
-**1. Kenapa saat jalanin `php artisan migrate`, Terminal nolak warna merah panjang? (Connection Refused/Unknown Database)**  
-> **Jawab:** Kamu lupa belum nyalain tombol "START" MySQL di XAMPP Panen kamu, atau... kamu lupa buka web *PhpMyAdmin* dan buat database kosong/baru dengan nama persis seperti di `.env` kamu (contoh: `pmb_system`). 
-
-**2. Kenapa saya gabisa Submit/Lanjut ujian secara normal? Keluar notif error!**  
-> **Jawab:** Ada yang aneh di terminal server kamu. Pastikan PHP version kamu sudah v8.2+ dan periksa koneksi internet / matikan AdBlock, karena sistem ujian membutuhkan paket Javascript CDN secara Realtime lewat Internet.
-
-**3. File Foto Bukti TF (Daftar Ulang) dari Mahasiswa kok kalau diklik Broken Image atau ilang?**  
-> **Jawab:** Tarik nafas dulu. Kamu kelewatan tahapan instalasi nomer `6`. Matikan server bentar (`Ctrl + C`), jalanin perintah siluman `php artisan storage:link`, lalu nyalain Server Laravel lagi.
+**Akses Peserta Ujian (Mahasiswa Baru)**
+Gunakan tautan pendaftaran (`/register`) pada halaman utama aplikasi untuk mencoba melakukan pembuatan akun mandiri (Simulasi User).
 
 ---
 
-## 🚑 Troubleshooting Error Langka (Advance)
+## 📖 FAQ & Panduan Solusi Kesalahan Umum (Troubleshooting)
 
-Berikut skenario mengerikan + Pil ajaibnya untuk menenangankan pikiran:
+**Q: Perintah `php artisan migrate` gagal berjalan (Connection Refused).**  
+A: Layanan *database/MySQL* pada komputer belum aktif. Buka perangkat lunak XAMPP atau Laragon, lalu pastikan Anda menekan *Start* pada modul MySQL. Pastikan juga Anda sudah membuat database dengan nama yang tertuang pada file `.env`.
 
-* 💥 **Error 500 / "No application encryption key has been specified."**  
-  👉 *Sembuhkan dengah Terminal:* `php artisan key:generate`
+**Q: Mengapa pada laman Admin, fitur kelulusan menampilkan pesan galat mengenai file gambar atau *storage*?**  
+A: Sangat mungkin Anda melewati langkah menautkan folder publik. Cukup jalankan perintah `php artisan storage:link`.
 
-* 💥 **Error "Target class [...] does not exist." saat jalanin sistem.**  
-  👉 Sistem Lupa Arah, paksa refresh dengan mengetik ini di Terminal: `composer dump-autoload`
+**Q: Terjadi kegagalan saat Calon Mahasiswa berusaha mengirim soal dengan notifikasi Status / Sesi tidak ditemukan?**  
+A: Pelaksanaan ujian dibekali parameter deteksi pembatasan interaksi. Segala aktivitas di luar batas antarmuka ujian—termasuk perpindahan menuju bilik jendela sistem operasi lain (Tab Out)—didokumentasikan. Apabila pelaksana melanggar hingga batasan toleransi, sistem memblokir tindakan *submit*. Hubungi Admin untuk mereset data pada Pangkalan Basis Data (`exam_sessions`).
 
-* 💥 **Error "The POST method is not supported for this route. Supported methods: GET, HEAD." / Halaman Expired (419).**  
-  👉 Ingat, website ini di *shield* oleh Token CSRF Laravel setiap saat. Cache kamu kedaluwarsa. Silahkan pencet tombol mundur (Back) lalu refresh (*F5*) halaman / Kosongkan Cache Browser kamu lalu coba ulangi lagi form-nya.
+**Q: Terjadi Error: `No application encryption key has been specified`.**  
+A: File `.env` kehilangan kode `APP_KEY`. Atasi dengan menjalankan perintah `php artisan key:generate`.
+
+**Q: Halaman menunjukkan pesan "Expired" (Error 419) pada saat menyerahkan formulir.**  
+A: Form *CSRF Token* yang di-*render* oleh Laravel telah usang karena durasi sesi lama dibiarkan tidak aktif. Penyelesaiannya adalah memuat ulang (*refresh/F5*) dan mengisi kembali formulir pada situs bersangkutan.
 
 ---
 
-*Hati-hati, kecanduan memandangi rapinya arsitektur koding web responsif PMB ini dapat menyebabkan Lupa Waktu!* 💻✨
+## 📜 Keterangan & Atribusi Pengembangan
+
+Aplikasi perangkat lunak ini diinisiasi dan dikembangkan dalam kurun waktu **± 1 Bulan**, mencakup fase abstraksi pemodelan sistem, penyusunan tata letak rupa antarmuka, penanaman fitur pengamanan algoritma sesi ujian (*Anti-Cheat*), sampai finalisasi *debugging* infrastruktur MVC (*Model-View-Controller*). Proyek ini merupakan wujud dedikasi hibah secara teknikal untuk standar *Ujian Sertifikasi Kompetensi (USK)*.
+
+Terima kasih untuk kelancaran jalannya proyek sertifikasi ini, atas nama:
+- 🎓 **Kandidat Praktikan** : TRISTAN
+- 🏫 **Kelas & Jurusan** : XII PPLG 
+- 🏛️ **Instansi Pendidikan** : SMK Negeri 65 Jakarta
+
+Proyek pengembangan arsitektur basis kode berskala *Full-Stack* ini dilaksanakan dengan arahan langsung dan dihibahkan oleh:  
+💻 **Alumnus / Pengembang Profesional**: [@athnf](https://github.com/athnf) di GitHub.
+
+***
+*Merupakan komitmen kami untuk menghadirkan kualitas perangkat lunak dengan pedoman standar industri yang valid dan profesional.*
