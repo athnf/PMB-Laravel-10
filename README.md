@@ -1,4 +1,4 @@
-# Lulusan Terbaik - Sistem Penerimaan Mahasiswa Baru Berbasis Web 🎓
+# Sistem Penerimaan Mahasiswa Baru Berbasis Web 🎓
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20.svg?logo=laravel)
